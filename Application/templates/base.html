@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block meta %}{% endblock %}
+    <script src="{{ url_for('static', filename='js/jquery-3.5.1.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}"/>
+    {% block head %} {% endblock %}
+    <title>{% block title %}Index{% endblock %} - Template</title>
+</head>
+<body>
+{% include "nav.html" %}
+<div class="container" style="height: calc(100vh - 64px); margin-top: 8px">
+    <div>
+        {% block flash %}
+        {% endblock %}
+    </div>
+    <div style="height: 100%">
+        {% block content %}{% endblock %}
+    </div>
+    </div>
+</body>
+</html>

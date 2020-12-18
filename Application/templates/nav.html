@@ -1,0 +1,18 @@
+{% block navbar %}
+    {% set active_page = active_page|default('index') -%}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{{ url_for('index') }}">Index</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item {% if active_page  == "index" %}active{% endif %}">
+                    <a class="nav-link" href="{{ url_for('index') }}">Index</a>
+                </li>  
+            </ul>
+        </div>
+    </nav>
+{% endblock %}

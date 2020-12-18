@@ -1,0 +1,9 @@
+sqlalchemy
+wtforms
+Flask
+Flask-SQLAlchemy
+Flask-Apscheduler
+xmltodict
+Flask-Wtf
+Werkzeug
+pymysql
