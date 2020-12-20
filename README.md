@@ -27,3 +27,27 @@ Application
 ###  Handler
 
 handle database query, update, deletion
+
+### Model
+
+Database model
+
+### Router
+
+Flask route endpoint
+
+### static
+
+js and css files
+
+### template
+
+Flask templates
+
+###  Tasks
+
+Flask-Apscheduler Tasks lists
+
+### Utils
+
+Tools code and class

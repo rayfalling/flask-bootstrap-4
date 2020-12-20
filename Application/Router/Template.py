@@ -3,6 +3,7 @@ from flask import render_template, url_for, redirect, session
 from ..Application import app
 
 
+# TODO your router here
 @app.route("/")
 def root():
     return redirect(url_for("index"))
@@ -10,10 +11,7 @@ def root():
 
 @app.route("/index", methods=["GET", "POST"])
 def index():
-    tip = TipHelper.check_tips(session)
-    if session.__dict__ is None:
-        session["login"] = False
-    return render_template("index.html", tip=tip)
+    return render_template("index.html")
 
 
 __all__ = ["root", "index"]
